@@ -13,7 +13,7 @@ export const login = user => ({ type: LOGIN, user });
 export const logout = () => ({ type: LOGOUT });
 
 // Reducer
-export default const reducer = (user = {}, action) => {
+export default reducer = (user = {}, action) => {
   switch (action.type) {
     case CREATE_USER:
       return action.user;

@@ -12,7 +12,7 @@ export const create = post => ({ type: CREATE, post });
 export const clear = () => ({ type: CLEAR });
 
 // Reducer
-export default const reducer = (posts = [], action) => {
+export default reducer = (posts = [], action) => {
   switch (action.type) {
     case INITIALIZE:
       return action.posts;
