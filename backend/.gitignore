@@ -13,3 +13,4 @@ yarn.lock/
 .env
 npm-debug.*
 *.log
+db.json
