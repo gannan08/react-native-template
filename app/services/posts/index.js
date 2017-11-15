@@ -7,12 +7,12 @@ const CREATE = 'posts/CREATE_POST';
 const CLEAR = 'posts/CLEAR';
 
 // Action Creators
-const init = posts => ({ type: INITIALIZE, posts });
-const create = post => ({ type: CREATE, post });
+export const init = posts => ({ type: INITIALIZE, posts });
+export const create = post => ({ type: CREATE, post });
 export const clear = () => ({ type: CLEAR });
 
 // Reducer
-export default (posts = [], action) => {
+export default const reducer = (posts = [], action) => {
   switch (action.type) {
     case INITIALIZE:
       return action.posts;
