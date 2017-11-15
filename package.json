@@ -1,7 +1,16 @@
 {
-  "name": "twitter-clone",
+  "name": "react-native-template",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gannan08/react-native-template.git"
+  },
+  "author": "gannan08",
+  "bugs": {
+    "url": "https://github.com/gannan08/react-native-template/issues"
+  },
+  "homepage": "https://github.com/gannan08/react-native-template#readme",
   "devDependencies": {
     "cross-env": "^5.1.1",
     "eslint": "^4.11.0",
@@ -16,15 +25,9 @@
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development react-native-scripts start",
-    "dev": "cross-env NODE_ENV=development react-native-scripts start",
-    "prod": "cross-env NODE_ENV=production react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "cross-env NODE_ENV=development react-native-scripts android",
-    "android:dev": "cross-env NODE_ENV=development react-native-scripts android",
-    "android:prod": "cross-env NODE_ENV=production react-native-scripts android",
     "ios": "cross-env NODE_ENV=development react-native-scripts ios",
-    "ios:dev": "cross-env NODE_ENV=development react-native-scripts ios",
-    "ios:prod": "cross-env NODE_ENV=production react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
@@ -35,7 +38,6 @@
     "axios": "^0.17.1",
     "babel-eslint": "^8.0.2",
     "expo": "^22.0.2",
-    "form-data": "^2.2.0",
     "lodash": "^4.17.4",
     "native-base": "^2.1.4",
     "prop-types": "^15.6.0",
