@@ -1,27 +1,34 @@
 import React, { Component } from 'react';
-import { AppRegistry, View } from 'react-native';
-import { Provider, connect } from 'react-redux';
+import { AppRegistry } from 'react-native';
+import { Provider } from 'react-redux';
 import { Font, AppLoading } from 'expo';
-import store from './app/redux/store';
-import Router from './app/config/routes';
+/**
+ * We can't `import foo from './app'` so we use './app/index',
+ * this is the shorthand for importing modules in javascript
+ * Please see Github issues below:
+ *   - https://github.com/facebook/react-native/issues/12608
+ *   - https://github.com/facebook/react-native/issues/12539
+ */
+import { Router, store } from './app/index';
+
 
 export default class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      isReady: false,
-    }
+      isReady: false
+    };
   }
 
   async componentWillMount() {
     await Font.loadAsync({
-      'Roboto': require('native-base/Fonts/Roboto.ttf'),
-      'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
-      'Pacifico': require('./app/assets/fonts/Pacifico.ttf'),
-      'Ionicons': require('native-base/Fonts/Ionicons.ttf'),
+      Roboto: require('native-base/Fonts/Roboto.ttf'),
+      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+      Pacifico: require('./app/assets/fonts/Pacifico.ttf'),
+      Ionicons: require('native-base/Fonts/Ionicons.ttf')
     });
 
-    this.setState({isReady: true});
+    this.setState({ isReady: true });
   }
 
 

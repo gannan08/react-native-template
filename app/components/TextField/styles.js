@@ -1,8 +1,8 @@
 export default {
   big: {
-    height: 200,
+    height: 200
   },
   small: {
-    height: 45,
+    height: 45
   }
 };

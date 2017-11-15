@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Item, Label, Input } from 'native-base';
 import styles from './styles';
 
-export default (props) => (
+const TextField = props => (
   <Item stackedLabel>
     <Label>{props.name}</Label>
     <Input
@@ -14,4 +15,16 @@ export default (props) => (
       numberOfLines={props.big ? 5 : 1}
     />
   </Item>
-)
+);
+
+TextField.defaultProps = {
+  big: false,
+  name: ''
+};
+
+TextField.propTypes = {
+  big: PropTypes.bool,
+  name: PropTypes.string
+};
+
+export default TextField;
